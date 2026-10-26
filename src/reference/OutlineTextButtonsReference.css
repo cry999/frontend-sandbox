@@ -1,0 +1,23 @@
+.reference-outline-button,
+.reference-text-button {
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.reference-outline-button {
+  padding: 11px 23px;
+  border: 1px solid #2563eb;
+  background: transparent;
+  color: #2563eb;
+}
+
+.reference-text-button {
+  padding: 12px 16px;
+  border: 0;
+  background: transparent;
+  color: #58665f;
+}

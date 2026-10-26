@@ -35,3 +35,10 @@
   .comparison { grid-template-columns: 1fr; }
   .lesson-heading h2 { font-size: 20px; }
 }
+
+.preview-stage-actions { padding: 24px 12px; }
+.practice-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; align-items: center; width: 100%; }
+.lesson-two-placeholder { margin: 0; color: #637168; font-size: 14px; line-height: 1.8; text-align: center; }
+.previous-lesson { margin-top: 28px; }
+.previous-lesson summary { padding: 12px 0; cursor: pointer; font-size: 14px; }
+.previous-lesson .comparison { margin-top: 12px; }
