@@ -1,2 +1,30 @@
 /* 第3回専用のクラスを付け、通常・hover・押下・フォーカスを整えましょう。 */
 /* 第1・2回のファイルを変更せず、必要な通常時のスタイルはここに書きます。 */
+button.btn-3 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #ffffff;
+  cursor: pointer;
+
+  padding: 12px 24px;
+  background-color: #2563eb;
+  border-radius: 8px;
+  border: none;
+
+}
+
+button.btn-3:hover {
+  background-color: #1d4ed8;
+}
+
+button.btn-3:focus-visible {
+  outline: solid 3px #2563eb;
+  outline-offset: 3px;
+}
+
+button.btn-3:active {
+  background-color: #1e40af;
+  position: relative;
+  top: 1px;
+}
