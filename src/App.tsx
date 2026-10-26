@@ -5,6 +5,8 @@ import BasicButtonExercise from './exercises/01-basic-button/BasicButtonExercise
 import BasicButtonReference from './reference/BasicButtonReference'
 import OutlineTextButtonsExercise from './exercises/02-outline-text-buttons/OutlineTextButtonsExercise'
 import OutlineTextButtonsReference from './reference/OutlineTextButtonsReference'
+import IconButtonsExercise from './exercises/04-icon-buttons/IconButtonsExercise'
+import IconButtonsReference from './reference/IconButtonsReference'
 import './App.css'
 
 const lessons = ['塗りつぶしボタン', '枠線・テキストボタン', '操作への反応', 'アイコンとボタン', '処理中・無効・完了', '用途に応じた組み合わせ']
@@ -34,10 +36,10 @@ export default function App() {
       <nav aria-label="練習プラン" className="lesson-nav">
         <ol>
           {lessons.map((lesson, index) => (
-            <li key={lesson} aria-current={index === 2 ? 'step' : undefined}>
+            <li key={lesson} aria-current={index === 3 ? 'step' : undefined}>
               <span className="lesson-number">{String(index + 1).padStart(2, '0')}</span>
               <span>{lesson}</span>
-              <span className="lesson-status">{index < 2 ? 'レビュー合格' : index === 2 ? '今回の課題' : '今後の課題'}</span>
+              <span className="lesson-status">{index < 3 ? 'レビュー合格' : index === 3 ? '今回の課題' : '今後の課題'}</span>
             </li>
           ))}
         </ol>
@@ -45,34 +47,47 @@ export default function App() {
       <section className="lesson" aria-labelledby="lesson-heading">
         <div className="lesson-heading">
           <div>
-            <p className="eyebrow">LESSON 03</p>
-            <h2 id="lesson-heading">操作に反応するボタン</h2>
+            <p className="eyebrow">LESSON 04</p>
+            <h2 id="lesson-heading">アイコン付き・アイコンのみのボタン</h2>
           </div>
           <span className="duration">目安 30〜60分</span>
         </div>
-        <p className="lesson-description">「保存する」ボタンを作り、マウスを重ねる・押す・Tabで選ぶときの変化を観察しましょう。</p>
+        <p className="lesson-description">「追加する」と「その他の操作」のボタンを作り、アイコンの配置・間隔・押せる範囲・読み上げ用の名前を学びましょう。</p>
         <div className="comparison">
           <section className="preview-panel" aria-labelledby="reference-heading">
             <h3 id="reference-heading">見本</h3>
-            <InteractionPreview><InteractiveButtonReference /></InteractionPreview>
-            <p className="panel-caption">マウスを重ねると濃く、押している間はさらに濃くなり1px下がります。Tabで外側に輪が出ます。</p>
+            <InteractionPreview><div className="practice-actions"><IconButtonsReference /></div></InteractionPreview>
+            <p className="panel-caption">アイコンは20px、文字との間隔は8px。高さは両方48px、「…」のボタンは幅も48pxです。</p>
           </section>
           <section className="preview-panel" aria-labelledby="exercise-heading">
             <h3 id="exercise-heading">あなたの実装</h3>
-            <InteractionPreview><InteractiveButtonExercise /></InteractionPreview>
+            <InteractionPreview><div className="practice-actions"><IconButtonsExercise /></div></InteractionPreview>
             <p className="panel-caption">ファイルを保存すると、この欄に反映されます。</p>
           </section>
         </div>
         <section className="instructions" aria-labelledby="task-heading">
           <h3 id="task-heading">今回の課題</h3>
           <ol>
-            <li><code>src/exercises/03-interactive-button/InteractiveButtonExercise.tsx</code>に「保存する」ボタンを書きます。</li>
-            <li>同じフォルダの<code>InteractiveButtonExercise.css</code>で通常・hover・押下・フォーカスの見た目を整えます。</li>
-            <li>マウスとTab・Enter・Spaceで試し、選択位置と押した反応が分かるか確かめます。操作回数は枠が自動で数えます。</li>
+            <li><code>src/exercises/04-icon-buttons/IconButtonsExercise.tsx</code>に2種類のボタンを書きます。アイコン素材は用意済みです。</li>
+            <li>同じフォルダの<code>IconButtonsExercise.css</code>でアイコンと文字の配置・間隔・押せる範囲を整えます。</li>
+            <li>アイコンのみのボタンにも読み上げ用の名前を付けます。マウスとTab・Enter・Spaceで試し、操作回数とフォーカスを確認します。</li>
           </ol>
           <p>できたら「レビューして」と伝えてください。詳しい完成条件は課題フォルダのREADMEにあります。</p>
         </section>
       </section>
+      <details className="previous-lesson">
+        <summary>第3回：操作に反応するボタン（レビュー合格済み）</summary>
+        <div className="comparison">
+          <section className="preview-panel" aria-label="第3回の見本">
+            <h3>見本</h3>
+            <InteractionPreview><InteractiveButtonReference /></InteractionPreview>
+          </section>
+          <section className="preview-panel" aria-label="第3回の実装">
+            <h3>あなたの実装</h3>
+            <InteractionPreview><InteractiveButtonExercise /></InteractionPreview>
+          </section>
+        </div>
+      </details>
       <details className="previous-lesson">
         <summary>第2回：枠線ボタン・テキストボタン（レビュー合格済み）</summary>
         <div className="comparison">

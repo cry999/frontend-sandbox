@@ -1,0 +1,34 @@
+.reference-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.reference-icon-button svg { flex-shrink: 0; }
+.reference-icon-button-add {
+  padding: 12px 20px;
+  border: 0;
+  background: #2563eb;
+  color: #fff;
+}
+.reference-icon-button-add:hover { background: #1d4ed8; }
+.reference-icon-button-add:active { background: #1e40af; }
+.reference-icon-button-more {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid #2563eb;
+  background: transparent;
+  color: #2563eb;
+}
+.reference-icon-button-more:hover { background: #eff6ff; }
+.reference-icon-button-more:active { background: #dbeafe; }
+.reference-icon-button:active { transform: translateY(1px); }
+.reference-icon-button:focus-visible { outline: 3px solid #2563eb; outline-offset: 3px; }

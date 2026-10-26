@@ -18,6 +18,7 @@
 - 第1回：レビュー合格（合格コミット `8ad4910`）。
 - 第2回：レビュー合格（2026-10-26）。[課題と完成条件](../src/exercises/02-outline-text-buttons/README.md)。
 - 第3回：レビュー合格（2026-10-26）。[課題と完成条件](../src/exercises/03-interactive-button/README.md)。
-- 第4〜6回：未着手。
+- 第4回：準備完了・実装待ち。[課題と完成条件](../src/exercises/04-icon-buttons/README.md)。
+- 第5〜6回：未着手。
 
 初回の課題は[src/exercises/01-basic-button/README.md](../src/exercises/01-basic-button/README.md)を参照する。
