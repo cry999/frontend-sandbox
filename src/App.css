@@ -42,3 +42,5 @@
 .previous-lesson { margin-top: 28px; }
 .previous-lesson summary { padding: 12px 0; cursor: pointer; font-size: 14px; }
 .previous-lesson .comparison { margin-top: 12px; }
+
+.activation-count { margin: 0 0 12px; color: #58665f; font-size: 13px; font-variant-numeric: tabular-nums; }

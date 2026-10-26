@@ -1,0 +1,22 @@
+.reference-interactive-button {
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.reference-interactive-button:hover { background: #1d4ed8; }
+.reference-interactive-button:active {
+  background: #1e40af;
+  transform: translateY(1px);
+}
+.reference-interactive-button:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
