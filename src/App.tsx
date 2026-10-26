@@ -10,6 +10,9 @@ import IconButtonsReference from './reference/IconButtonsReference'
 import ButtonStatesExercise from './exercises/05-button-states/ButtonStatesExercise'
 import ButtonStatesReference from './reference/ButtonStatesReference'
 import SavePreview from './practice/SavePreview'
+import ActionPreview from './practice/ActionPreview'
+import ActionCombinationsExercise from './exercises/06-action-combinations/ActionCombinationsExercise'
+import ActionCombinationsReference from './reference/ActionCombinationsReference'
 import './App.css'
 
 const lessons = ['塗りつぶしボタン', '枠線・テキストボタン', '操作への反応', 'アイコンとボタン', '処理中・無効・完了', '用途に応じた組み合わせ']
@@ -39,10 +42,10 @@ export default function App() {
       <nav aria-label="練習プラン" className="lesson-nav">
         <ol>
           {lessons.map((lesson, index) => (
-            <li key={lesson} aria-current={index === 4 ? 'step' : undefined}>
+            <li key={lesson} aria-current={index === 5 ? 'step' : undefined}>
               <span className="lesson-number">{String(index + 1).padStart(2, '0')}</span>
               <span>{lesson}</span>
-              <span className="lesson-status">{index < 4 ? 'レビュー合格' : index === 4 ? '今回の課題' : '今後の課題'}</span>
+              <span className="lesson-status">{index < 5 ? 'レビュー合格' : '今回の課題'}</span>
             </li>
           ))}
         </ol>
@@ -50,34 +53,47 @@ export default function App() {
       <section className="lesson" aria-labelledby="lesson-heading">
         <div className="lesson-heading">
           <div>
-            <p className="eyebrow">LESSON 05</p>
-            <h2 id="lesson-heading">処理中・無効・完了のボタン</h2>
+            <p className="eyebrow">LESSON 06 · FINAL</p>
+            <h2 id="lesson-heading">保存・削除・キャンセルの組み合わせ</h2>
           </div>
           <span className="duration">目安 30〜60分</span>
         </div>
-        <p className="lesson-description">保存の状態を文字と見た目で伝え、二重送信を防ぎましょう。文字が変わっても、ボタンの幅は一定に保ちます。</p>
+        <p className="lesson-description">最終課題です。保存を主役に、キャンセルを脇役に、削除を慎重に選べる操作に。色・強弱・間隔で3つの役割を伝えましょう。</p>
         <div className="comparison">
           <section className="preview-panel" aria-labelledby="reference-heading">
             <h3 id="reference-heading">見本</h3>
-            <SavePreview Button={ButtonStatesReference} />
-            <p className="panel-caption">確認欄をチェックして保存。約2秒で完了します。幅176px・高さ48pxはどの状態でも同じです。</p>
+            <ActionPreview Actions={ActionCombinationsReference} />
+            <p className="panel-caption">保存とキャンセルを近づけ、削除との間隔を空けています。狭い画面ではグループごとに折り返します。</p>
           </section>
           <section className="preview-panel" aria-labelledby="exercise-heading">
             <h3 id="exercise-heading">あなたの実装</h3>
-            <SavePreview Button={ButtonStatesExercise} />
+            <ActionPreview Actions={ActionCombinationsExercise} />
             <p className="panel-caption">ファイルを保存すると、この欄に反映されます。</p>
           </section>
         </div>
         <section className="instructions" aria-labelledby="task-heading">
           <h3 id="task-heading">今回の課題</h3>
           <ol>
-            <li><code>src/exercises/05-button-states/ButtonStatesExercise.tsx</code>にボタンと状態管理を書きます。確認欄と模擬保存は用意済みです。</li>
-            <li>同じフォルダの<code>ButtonStatesExercise.css</code>で未確認・保存可能・処理中・完了の見た目を整えます。</li>
-            <li>連打しても送信回数が1回に保たれるか、文字が変わっても幅が動かないかを確認します。Tab・Enter・Spaceでも試しましょう。</li>
+            <li><code>src/exercises/06-action-combinations/ActionCombinationsExercise.tsx</code>に3つのボタンを作り、対応する操作関数をつなぎます。</li>
+            <li>同じフォルダの<code>ActionCombinationsExercise.css</code>で役割ごとの強弱と配置を整えます。</li>
+            <li>保存・キャンセルを近くに、削除を離して配置します。360〜390px幅とTab・Enter・Spaceで確認しましょう。</li>
           </ol>
           <p>できたら「レビューして」と伝えてください。詳しい完成条件は課題フォルダのREADMEにあります。</p>
         </section>
       </section>
+      <details className="previous-lesson">
+        <summary>第5回：処理中・無効・完了のボタン（レビュー合格済み）</summary>
+        <div className="comparison">
+          <section className="preview-panel" aria-label="第5回の見本">
+            <h3>見本</h3>
+            <SavePreview Button={ButtonStatesReference} />
+          </section>
+          <section className="preview-panel" aria-label="第5回の実装">
+            <h3>あなたの実装</h3>
+            <SavePreview Button={ButtonStatesExercise} />
+          </section>
+        </div>
+      </details>
       <details className="previous-lesson">
         <summary>第4回：アイコン付き・アイコンのみのボタン（レビュー合格済み）</summary>
         <div className="comparison">

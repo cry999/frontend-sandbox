@@ -1,0 +1,14 @@
+.reference-action-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
+.reference-action-main { display: flex; gap: 8px; margin-left: auto; }
+.reference-action { min-height: 44px; padding: 10px 12px; border: 1px solid transparent; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap; cursor: pointer; }
+.reference-action-save { background: #2563eb; color: #fff; }
+.reference-action-save:hover { background: #1d4ed8; }
+.reference-action-save:active { background: #1e40af; }
+.reference-action-cancel { border-color: #b6c0cc; background: #fff; color: #334155; }
+.reference-action-cancel:hover { background: #f1f5f9; }
+.reference-action-cancel:active { background: #e2e8f0; }
+.reference-action-delete { background: transparent; color: #b91c1c; }
+.reference-action-delete:hover { background: #fef2f2; }
+.reference-action-delete:active { background: #fee2e2; }
+.reference-action:active { transform: translateY(1px); }
+.reference-action:focus-visible { outline: 3px solid #2563eb; outline-offset: 3px; }
