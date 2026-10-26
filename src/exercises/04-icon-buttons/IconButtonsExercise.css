@@ -1,1 +1,64 @@
 /* 第4回のボタンのスタイルをここに書いてください。専用のクラス名を使いましょう。 */
+button.btn-4 {
+  font-size: 16px;
+  font-weight: 600;
+
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  padding: 12px 24px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+
+button.btn-4:focus-visible {
+  outline: solid 3px #2563eb;
+  outline-offset: 3px;
+}
+
+button.btn-4:active {
+  position: relative;
+  top: 1px;
+}
+
+button.btn-4-primary {
+  color: #ffffff;
+
+  background-color: #2563eb;
+}
+
+button.btn-4-primary:hover {
+  background-color: #1d4ed8;
+}
+
+button.btn-4-primary:active {
+  background-color: #1e40af;
+}
+
+button.btn-4-secondary {
+  --border-width: 1px;
+
+  line-height: 1;
+
+  color: #2563eb;
+  border: solid #2563eb var(--border-width);
+  padding: calc(14px - var(--border-width)) calc(14px - var(--border-width));
+}
+
+button.btn-4-secondary:hover {
+  background-color: #eff6ff;
+}
+
+button.btn-4-secondary:active {
+  background-color: #dbeafe;
+}
+
+span.btn-4-text {
+  font-size: 16px;
+
+  margin: 0;
+  margin-left: 8px;
+}
