@@ -60,3 +60,9 @@
 .action-editor-content p.action-editor-warning { margin-top: 16px; color: #991b1b; }
 .action-editor-footer { padding: 16px; border-top: 1px solid #dce3de; }
 .action-result { min-height: 3.6em; margin: 16px 0 8px; color: #58665f; font-size: 13px; line-height: 1.8; }
+
+.animation-observation { margin-top: 20px; }
+.animation-observation summary { cursor: pointer; font-size: 13px; line-height: 1.8; }
+.animation-observation .panel-caption { margin-top: 12px; }
+.animation-samples { display: grid; gap: 24px; padding: 24px 8px; text-align: center; }
+.animation-samples span { display: block; margin-bottom: 12px; color: #58665f; font-size: 12px; }

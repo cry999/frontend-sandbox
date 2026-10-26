@@ -13,6 +13,8 @@ import SavePreview from './practice/SavePreview'
 import ActionPreview from './practice/ActionPreview'
 import ActionCombinationsExercise from './exercises/06-action-combinations/ActionCombinationsExercise'
 import ActionCombinationsReference from './reference/ActionCombinationsReference'
+import Animation01ColorExercise from './exercises/animation-01-color-transition/Animation01ColorExercise'
+import Animation01ColorReference from './reference/Animation01ColorReference'
 import './App.css'
 
 const lessons = ['塗りつぶしボタン', '枠線・テキストボタン', '操作への反応', 'アイコンとボタン', '処理中・無効・完了', '用途に応じた組み合わせ']
@@ -42,10 +44,10 @@ export default function App() {
       <nav aria-label="練習プラン" className="lesson-nav">
         <ol>
           {lessons.map((lesson, index) => (
-            <li key={lesson} aria-current={index === 5 ? 'step' : undefined}>
+            <li key={lesson}>
               <span className="lesson-number">{String(index + 1).padStart(2, '0')}</span>
               <span>{lesson}</span>
-              <span className="lesson-status">{index < 5 ? 'レビュー合格' : '今回の課題'}</span>
+              <span className="lesson-status">レビュー合格</span>
             </li>
           ))}
         </ol>
@@ -53,34 +55,57 @@ export default function App() {
       <section className="lesson" aria-labelledby="lesson-heading">
         <div className="lesson-heading">
           <div>
-            <p className="eyebrow">LESSON 06 · FINAL</p>
-            <h2 id="lesson-heading">保存・削除・キャンセルの組み合わせ</h2>
+            <p className="eyebrow">ANIMATION 01 / 30</p>
+            <h2 id="lesson-heading">じわっと色が変わるボタン</h2>
           </div>
           <span className="duration">目安 30〜60分</span>
         </div>
-        <p className="lesson-description">最終課題です。保存を主役に、キャンセルを脇役に、削除を慎重に選べる操作に。色・強弱・間隔で3つの役割を伝えましょう。</p>
+        <p className="lesson-description">背景色の変化に、短い時間を添えてみましょう。ポインターを重ねたときと離したとき、両方の変化を観察します。</p>
         <div className="comparison">
           <section className="preview-panel" aria-labelledby="reference-heading">
-            <h3 id="reference-heading">見本</h3>
-            <ActionPreview Actions={ActionCombinationsReference} />
-            <p className="panel-caption">保存とキャンセルを近づけ、削除との間隔を空けています。狭い画面ではグループごとに折り返します。</p>
+            <h3 id="reference-heading">見本 · 300ms / ease</h3>
+            <InteractionPreview><Animation01ColorReference /></InteractionPreview>
+            <p className="panel-caption">青から濃い青へ、約0.3秒。離すと同じ時間で戻ります。Tabで選んだときも色が変わり、輪が出ます。</p>
+            <details className="animation-observation">
+              <summary>時間と速度曲線を比べる</summary>
+              <p className="panel-caption">まず上の見本と150msを比較。次に300ms同士でeaseとlinearを比較します。下の操作回数で比較用ボタンの反応も確認できます。</p>
+              <InteractionPreview>
+                <div className="animation-samples">
+                  <div><span>150ms / ease（時間だけ変更）</span><Animation01ColorReference variant="quick" /></div>
+                  <div><span>300ms / linear（速度曲線だけ変更）</span><Animation01ColorReference variant="linear" /></div>
+                </div>
+              </InteractionPreview>
+            </details>
           </section>
           <section className="preview-panel" aria-labelledby="exercise-heading">
             <h3 id="exercise-heading">あなたの実装</h3>
-            <ActionPreview Actions={ActionCombinationsExercise} />
-            <p className="panel-caption">ファイルを保存すると、この欄に反映されます。</p>
+            <InteractionPreview><Animation01ColorExercise /></InteractionPreview>
+            <p className="panel-caption">ファイルを保存すると、この欄に反映されます。操作回数の表示は用意済みです。</p>
           </section>
         </div>
         <section className="instructions" aria-labelledby="task-heading">
           <h3 id="task-heading">今回の課題</h3>
           <ol>
-            <li><code>src/exercises/06-action-combinations/ActionCombinationsExercise.tsx</code>に3つのボタンを作り、対応する操作関数をつなぎます。</li>
-            <li>同じフォルダの<code>ActionCombinationsExercise.css</code>で役割ごとの強弱と配置を整えます。</li>
-            <li>保存・キャンセルを近くに、削除を離して配置します。360〜390px幅とTab・Enter・Spaceで確認しましょう。</li>
+            <li><code>src/exercises/animation-01-color-transition/Animation01ColorExercise.tsx</code>の案内文を「続ける」ボタンに置き換えます。</li>
+            <li>同じフォルダの<code>Animation01ColorExercise.css</code>で見た目と背景色のtransitionを作ります。重ねる・離す両方を滑らかにしましょう。</li>
+            <li>Tab・Enter・Space、360px・390px幅、動きを減らす設定で確認します。詳しい手順と完成条件はREADMEにあります。</li>
           </ol>
-          <p>できたら「レビューして」と伝えてください。詳しい完成条件は課題フォルダのREADMEにあります。</p>
+          <p>最初は見本の色の変わり方を観察しましょう。できたら「レビューして」と伝えてください。</p>
         </section>
       </section>
+      <details className="previous-lesson">
+        <summary>第6回：保存・削除・キャンセルの組み合わせ（レビュー合格済み）</summary>
+        <div className="comparison">
+          <section className="preview-panel" aria-label="第6回の見本">
+            <h3>見本</h3>
+            <ActionPreview Actions={ActionCombinationsReference} />
+          </section>
+          <section className="preview-panel" aria-label="第6回の実装">
+            <h3>あなたの実装</h3>
+            <ActionPreview Actions={ActionCombinationsExercise} />
+          </section>
+        </div>
+      </details>
       <details className="previous-lesson">
         <summary>第5回：処理中・無効・完了のボタン（レビュー合格済み）</summary>
         <div className="comparison">
