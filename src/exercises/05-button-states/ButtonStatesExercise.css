@@ -1,1 +1,75 @@
 /* 第5回の装飾を書いてください。過去の課題と重ならないクラス名を使います。 */
+div.btn-5-container {
+  display: grid;
+  width: 100%;
+  justify-items: center;
+  gap: 16px;
+}
+
+button.btn-5 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  background-color: transparent;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 12px 24px;
+  width: 176px;
+}
+
+button.btn-5-disabled {
+  background-color: #e2e8f0;
+  color: #526175;
+
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+
+button.btn-5-todo {
+  background-color: #2563eb;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #1d4ed8;
+
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: #1e40af;
+
+    position: relative;
+    top: 1px;
+  }
+
+  &:focus-visible {
+    outline: solid 3px #2563eb;
+    outline-offset: 3px;
+  }
+}
+
+button.btn-5-wip {
+  background-color: #2563eb;
+  color: #ffffff;
+
+  &:hover {
+    cursor: progress;
+  }
+}
+
+button.btn-5-done {
+  background-color: #166534;
+  color: #ffffff;
+}
+
+
+span.text-5 {
+  font-size: 12px;
+  color: #526175;
+  min-height: 36px;
+  text-align: center;
+}
