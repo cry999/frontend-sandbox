@@ -1,0 +1,37 @@
+.practice-page { max-width: 1120px; margin: 0 auto; padding: 64px 32px 80px; }
+.page-header { margin-bottom: 36px; }
+.eyebrow { margin: 0 0 12px; color: #52675f; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; }
+.page-header h1 { margin: 0; font-size: clamp(28px, 4vw, 42px); line-height: 1.4; letter-spacing: -0.04em; }
+.introduction, .lesson-description { color: #58665f; line-height: 1.9; }
+.introduction { margin: 16px 0 0; }
+.lesson-nav { margin-bottom: 36px; }
+.lesson-nav ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; list-style: none; margin: 0; padding: 0; }
+.lesson-nav li { display: grid; grid-template-columns: auto 1fr; column-gap: 10px; row-gap: 5px; align-items: center; padding: 16px; border: 1px solid #dce3de; border-radius: 12px; font-size: 14px; }
+.lesson-nav li[aria-current] { border-color: #3e6955; background: #eaf1eb; }
+.lesson-number { color: #52675f; font-size: 12px; font-variant-numeric: tabular-nums; }
+.lesson-status { grid-column: 2; color: #58665f; font-size: 12px; }
+.lesson { padding: 32px; border: 1px solid #dce3de; border-radius: 20px; background: #fff; }
+.lesson-heading { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; }
+.lesson-heading h2 { margin: 0; font-size: 23px; line-height: 1.5; }
+.duration { color: #58665f; font-size: 13px; }
+.lesson-description { margin: 18px 0 28px; }
+.comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.preview-panel { min-width: 0; padding: 20px; border: 1px solid #e0e6e1; border-radius: 14px; }
+.preview-panel h3 { margin: 0; font-size: 14px; }
+.preview-stage { min-height: 180px; display: flex; align-items: center; justify-content: center; margin: 16px 0; border-radius: 8px; background: #f7f8fa; }
+.panel-caption { margin: 0; color: #58665f; font-size: 12px; line-height: 1.8; }
+.exercise-placeholder { margin: 20px; color: #637168; font-size: 14px; text-align: center; }
+.instructions { margin-top: 28px; padding-top: 24px; border-top: 1px solid #e0e6e1; }
+.instructions h3 { margin: 0 0 14px; font-size: 16px; }
+.instructions ol { margin: 0; padding-left: 22px; }
+.instructions li, .instructions p { color: #58665f; font-size: 14px; line-height: 1.9; }
+.instructions li + li { margin-top: 8px; }
+.instructions p { margin: 16px 0 0; }
+.instructions code { overflow-wrap: anywhere; font-size: 12px; color: #263e32; }
+@media (max-width: 720px) {
+  .practice-page { padding: 32px 16px 48px; }
+  .lesson-nav ol { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lesson { padding: 24px 16px; }
+  .comparison { grid-template-columns: 1fr; }
+  .lesson-heading h2 { font-size: 20px; }
+}

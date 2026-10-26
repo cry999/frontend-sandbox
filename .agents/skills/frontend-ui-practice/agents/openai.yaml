@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI実装の練習"
+  short_description: "ボタンづくりを通じて、見本の観察・自分での実装・レビューと改善を進める"
+  default_prompt: "$frontend-ui-practice を使って、現在の進捗に合ったUI練習を進めてください。"
