@@ -23,3 +23,7 @@
 - 第6回：レビュー合格（2026-10-26）。[課題と完成条件](../src/exercises/06-action-combinations/README.md)。全6回完了。
 
 初回の課題は[src/exercises/01-basic-button/README.md](../src/exercises/01-basic-button/README.md)を参照する。
+
+## 追加練習：ボタンアニメーション
+
+基礎編の全6回に続き、[全30問のアニメーション練習](animation-plan.md)を第1問から順に進める。各問で見本・ひな形の準備、ユーザーによる実装、レビュー、合格コミット、次の問へのチャット引き継ぎを行う。
