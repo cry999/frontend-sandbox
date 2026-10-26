@@ -1,2 +1,30 @@
 /* 自分のボタンのスタイルをここに書きます。 */
 /* ボタンに専用のクラスを付け、見本や第1回に影響しないようにしましょう。 */
+button.lesson-2-btn {
+  border: none;
+  margin: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #ffffff;
+
+  padding: 12px 24px;
+  border-radius: 8px;
+}
+
+button.lesson-2-outline-btn {
+  --border-width: 1px;
+
+  color: #2563eb;
+  border: solid #2563eb var(--border-width);
+  padding: calc(12px - var(--border-width)) calc(24px - var(--border-width));
+}
+
+button.lesson-2-text-btn {
+  color: #445566;
+}
