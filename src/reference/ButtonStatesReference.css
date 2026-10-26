@@ -1,0 +1,22 @@
+.reference-save-group { display: grid; justify-items: center; gap: 16px; width: 100%; }
+.reference-save-button {
+  width: 176px;
+  height: 48px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.reference-save-button:enabled:hover { background: #1d4ed8; }
+.reference-save-button:enabled:active { background: #1e40af; transform: translateY(1px); }
+.reference-save-button:focus-visible { outline: 3px solid #2563eb; outline-offset: 3px; }
+.reference-save-button:disabled { background: #e2e8f0; color: #526175; cursor: not-allowed; }
+.reference-save-button-saving:disabled { background: #2563eb; color: #fff; cursor: wait; }
+.reference-save-button-done:disabled { background: #166534; color: #fff; cursor: default; }
+.reference-save-status { min-height: 3.6em; margin: 0; padding: 0 12px; color: #58665f; font-size: 12px; line-height: 1.8; text-align: center; }
