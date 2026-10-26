@@ -20,6 +20,6 @@
 - 第3回：レビュー合格（2026-10-26）。[課題と完成条件](../src/exercises/03-interactive-button/README.md)。
 - 第4回：レビュー合格（2026-10-26）。[課題と完成条件](../src/exercises/04-icon-buttons/README.md)。
 - 第5回：レビュー合格（2026-10-26）。[課題と完成条件](../src/exercises/05-button-states/README.md)。
-- 第6回：準備完了・実装待ち。[課題と完成条件](../src/exercises/06-action-combinations/README.md)。最終課題。
+- 第6回：レビュー合格（2026-10-26）。[課題と完成条件](../src/exercises/06-action-combinations/README.md)。全6回完了。
 
 初回の課題は[src/exercises/01-basic-button/README.md](../src/exercises/01-basic-button/README.md)を参照する。

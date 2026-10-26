@@ -1,2 +1,84 @@
 /* 第6回のボタンと配置をここに書いてください。クラス名は lesson-six- などで区別します。 */
-.lesson-six-placeholder { margin: 0; color: #637168; font-size: 14px; line-height: 1.8; }
+.lesson-six-placeholder {
+  margin: 0;
+  color: #637168;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+button.btn-6 {
+  font-size: 14px;
+  font-weight: 600;
+
+  border: none;
+  border-radius: 8px;
+  padding: 12px 12px;
+  margin: 0 4px;
+
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+
+  &:focus-visible {
+    outline: solid 3px #2563eb;
+    outline-offset: 3px;
+  }
+}
+
+div.btn-6-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  white-space: nowrap;
+}
+
+div.btn-6-safety-container {
+  margin-left: auto;
+
+  display: flex;
+}
+
+button.btn-6-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #1d4ed8;
+  }
+
+  &:active {
+    background-color: #1e40af;
+  }
+}
+
+button.btn-6-secondary {
+  color: #334155;
+  border: solid #b6c0cc 1px;
+
+  &:hover {
+    background-color: #f1f5f9;
+  }
+
+  &:active {
+    background-color: #e2e8f0;
+  }
+}
+
+button.btn-6-danger {
+  color: #b91c1c;
+
+  &:hover {
+    background-color: #fef2f2;
+  }
+
+  &:active {
+    background-color: #fee2e2;
+  }
+}
