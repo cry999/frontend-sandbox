@@ -15,6 +15,8 @@ import ActionCombinationsExercise from './exercises/06-action-combinations/Actio
 import ActionCombinationsReference from './reference/ActionCombinationsReference'
 import Animation01ColorExercise from './exercises/animation-01-color-transition/Animation01ColorExercise'
 import Animation01ColorReference from './reference/Animation01ColorReference'
+import Animation02FloatingExercise from './exercises/animation-02-floating-button/Animation02FloatingExercise'
+import Animation02FloatingReference from './reference/Animation02FloatingReference'
 import './App.css'
 
 const lessons = ['塗りつぶしボタン', '枠線・テキストボタン', '操作への反応', 'アイコンとボタン', '処理中・無効・完了', '用途に応じた組み合わせ']
@@ -55,15 +57,39 @@ export default function App() {
       <section className="lesson" aria-labelledby="lesson-heading">
         <div className="lesson-heading">
           <div>
-            <p className="eyebrow">ANIMATION 01 / 30</p>
-            <h2 id="lesson-heading">じわっと色が変わるボタン</h2>
+            <p className="eyebrow">ANIMATION 02 / 30</p>
+            <h2 id="lesson-heading">ふわっと浮くボタン</h2>
           </div>
           <span className="duration">目安 30〜60分</span>
         </div>
-        <p className="lesson-description">背景色の変化に、短い時間を添えてみましょう。ポインターを重ねたときと離したとき、両方の変化を観察します。</p>
+        <p className="lesson-description">少し上に動くボタンと、広がる影。位置と影が一緒に変わると、どんな奥行きを感じるでしょうか。</p>
         <div className="comparison">
           <section className="preview-panel" aria-labelledby="reference-heading">
-            <h3 id="reference-heading">見本 · 300ms / ease</h3>
+            <h3 id="reference-heading">見本 · 4px / 300ms</h3>
+            <InteractionPreview><Animation02FloatingReference /></InteractionPreview>
+            <p className="panel-caption">重ねると4px浮き、影が広がります。離すと滑らかに戻ります。下端にポインターを置いたままでも安定するか観察しましょう。</p>
+          </section>
+          <section className="preview-panel" aria-labelledby="exercise-heading">
+            <h3 id="exercise-heading">あなたの実装</h3>
+            <InteractionPreview><Animation02FloatingExercise /></InteractionPreview>
+            <p className="panel-caption">保存すると、この欄に反映されます。操作回数の表示は用意済みです。</p>
+          </section>
+        </div>
+        <section className="instructions" aria-labelledby="task-heading">
+          <h3 id="task-heading">今回の課題</h3>
+          <ol>
+            <li><code>src/exercises/animation-02-floating-button/Animation02FloatingExercise.tsx</code>に「詳細を見る」ボタンを作ります。</li>
+            <li>同じフォルダの<code>Animation02FloatingExercise.css</code>で移動と影を連動させます。押せる範囲を安定させ、行きも戻りも滑らかにしましょう。</li>
+            <li>Tab・Enter・Space、360px・390px幅、動きを減らす設定で確認します。詳しい完成条件はREADMEにあります。</li>
+          </ol>
+          <p>まず見本の移動と影を観察しましょう。できたら、浮いて見えた理由を一言添えて「レビューして」と伝えてください。</p>
+        </section>
+      </section>
+      <details className="previous-lesson">
+        <summary>アニメーション01：じわっと色が変わる（レビュー合格済み）</summary>
+        <div className="comparison">
+          <section className="preview-panel" aria-label="アニメーション01の見本">
+            <h3 >見本 · 300ms / ease</h3>
             <InteractionPreview><Animation01ColorReference /></InteractionPreview>
             <p className="panel-caption">青から濃い青へ、約0.3秒。離すと同じ時間で戻ります。Tabで選んだときも色が変わり、輪が出ます。</p>
             <details className="animation-observation">
@@ -77,22 +103,13 @@ export default function App() {
               </InteractionPreview>
             </details>
           </section>
-          <section className="preview-panel" aria-labelledby="exercise-heading">
-            <h3 id="exercise-heading">あなたの実装</h3>
+          <section className="preview-panel" aria-label="アニメーション01の実装">
+            <h3 >あなたの実装</h3>
             <InteractionPreview><Animation01ColorExercise /></InteractionPreview>
             <p className="panel-caption">ファイルを保存すると、この欄に反映されます。操作回数の表示は用意済みです。</p>
           </section>
         </div>
-        <section className="instructions" aria-labelledby="task-heading">
-          <h3 id="task-heading">今回の課題</h3>
-          <ol>
-            <li><code>src/exercises/animation-01-color-transition/Animation01ColorExercise.tsx</code>の案内文を「続ける」ボタンに置き換えます。</li>
-            <li>同じフォルダの<code>Animation01ColorExercise.css</code>で見た目と背景色のtransitionを作ります。重ねる・離す両方を滑らかにしましょう。</li>
-            <li>Tab・Enter・Space、360px・390px幅、動きを減らす設定で確認します。詳しい手順と完成条件はREADMEにあります。</li>
-          </ol>
-          <p>最初は見本の色の変わり方を観察しましょう。できたら「レビューして」と伝えてください。</p>
-        </section>
-      </section>
+      </details>
       <details className="previous-lesson">
         <summary>第6回：保存・削除・キャンセルの組み合わせ（レビュー合格済み）</summary>
         <div className="comparison">

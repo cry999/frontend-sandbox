@@ -1,0 +1,38 @@
+.animation-02-reference {
+  display: inline-grid;
+  padding: 4px 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  cursor: pointer;
+}
+.animation-02-reference-face {
+  display: grid;
+  place-items: center;
+  min-height: 44px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: #2563eb;
+  box-shadow: 0 2px 4px rgb(30 64 175 / 18%);
+  pointer-events: none;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+.animation-02-reference:hover .animation-02-reference-face,
+.animation-02-reference:focus-visible .animation-02-reference-face {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 18px rgb(30 64 175 / 26%);
+}
+.animation-02-reference:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animation-02-reference-face { transition: none; }
+  .animation-02-reference:hover .animation-02-reference-face,
+  .animation-02-reference:focus-visible .animation-02-reference-face { transform: none; }
+}
