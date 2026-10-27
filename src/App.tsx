@@ -17,6 +17,8 @@ import Animation01ColorExercise from './exercises/animation-01-color-transition/
 import Animation01ColorReference from './reference/Animation01ColorReference'
 import Animation02FloatingExercise from './exercises/animation-02-floating-button/Animation02FloatingExercise'
 import Animation02FloatingReference from './reference/Animation02FloatingReference'
+import Animation03PressExercise from './exercises/animation-03-press-button/Animation03PressExercise'
+import Animation03PressReference from './reference/Animation03PressReference'
 import './App.css'
 
 const lessons = ['塗りつぶしボタン', '枠線・テキストボタン', '操作への反応', 'アイコンとボタン', '処理中・無効・完了', '用途に応じた組み合わせ']
@@ -57,34 +59,47 @@ export default function App() {
       <section className="lesson" aria-labelledby="lesson-heading">
         <div className="lesson-heading">
           <div>
-            <p className="eyebrow">ANIMATION 02 / 30</p>
-            <h2 id="lesson-heading">ふわっと浮くボタン</h2>
+            <p className="eyebrow">ANIMATION 03 / 30</p>
+            <h2 id="lesson-heading">押すと沈むボタン</h2>
           </div>
           <span className="duration">目安 30〜60分</span>
         </div>
-        <p className="lesson-description">少し上に動くボタンと、広がる影。位置と影が一緒に変わると、どんな奥行きを感じるでしょうか。</p>
+        <p className="lesson-description">押している間だけ少し縮む面と、浅くなる影。離した瞬間まで観察して、押した感触を作りましょう。</p>
         <div className="comparison">
           <section className="preview-panel" aria-labelledby="reference-heading">
-            <h3 id="reference-heading">見本 · 4px / 300ms</h3>
-            <InteractionPreview><Animation02FloatingReference /></InteractionPreview>
-            <p className="panel-caption">重ねると4px浮き、影が広がります。離すと滑らかに戻ります。下端にポインターを置いたままでも安定するか観察しましょう。</p>
+            <h3 id="reference-heading">見本 · 96% / 120ms</h3>
+            <InteractionPreview><Animation03PressReference /></InteractionPreview>
+            <p className="panel-caption">押し続けると面が96%に縮み、2px沈んで影が浅くなります。離すと戻ります。端で押しても安定するか観察しましょう。</p>
           </section>
           <section className="preview-panel" aria-labelledby="exercise-heading">
             <h3 id="exercise-heading">あなたの実装</h3>
-            <InteractionPreview><Animation02FloatingExercise /></InteractionPreview>
+            <InteractionPreview><Animation03PressExercise /></InteractionPreview>
             <p className="panel-caption">保存すると、この欄に反映されます。操作回数の表示は用意済みです。</p>
           </section>
         </div>
         <section className="instructions" aria-labelledby="task-heading">
           <h3 id="task-heading">今回の課題</h3>
           <ol>
-            <li><code>src/exercises/animation-02-floating-button/Animation02FloatingExercise.tsx</code>に「詳細を見る」ボタンを作ります。</li>
-            <li>同じフォルダの<code>Animation02FloatingExercise.css</code>で移動と影を連動させます。押せる範囲を安定させ、行きも戻りも滑らかにしましょう。</li>
+            <li><code>src/exercises/animation-03-press-button/Animation03PressExercise.tsx</code>に「押してみる」ボタンを作ります。</li>
+            <li>同じフォルダの<code>Animation03PressExercise.css</code>で縮小と影を連動させます。押せる範囲を固定し、押す・離すの両方を滑らかにしましょう。</li>
             <li>Tab・Enter・Space、360px・390px幅、動きを減らす設定で確認します。詳しい完成条件はREADMEにあります。</li>
           </ol>
-          <p>まず見本の移動と影を観察しましょう。できたら、浮いて見えた理由を一言添えて「レビューして」と伝えてください。</p>
+          <p>まず見本を長押しして、面の大きさと影を観察しましょう。できたら、沈んで見えた理由を一言添えて「レビューして」と伝えてください。</p>
         </section>
       </section>
+      <details className="previous-lesson">
+        <summary>アニメーション02：ふわっと浮く（レビュー合格済み）</summary>
+        <div className="comparison">
+          <section className="preview-panel" aria-label="アニメーション02の見本">
+            <h3>見本 · 4px / 300ms</h3>
+            <InteractionPreview><Animation02FloatingReference /></InteractionPreview>
+          </section>
+          <section className="preview-panel" aria-label="アニメーション02の実装">
+            <h3>あなたの実装</h3>
+            <InteractionPreview><Animation02FloatingExercise /></InteractionPreview>
+          </section>
+        </div>
+      </details>
       <details className="previous-lesson">
         <summary>アニメーション01：じわっと色が変わる（レビュー合格済み）</summary>
         <div className="comparison">

@@ -1,0 +1,41 @@
+.animation-03-reference {
+  display: inline-grid;
+  padding: 4px 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  cursor: pointer;
+}
+.animation-03-reference-face {
+  display: grid;
+  place-items: center;
+  min-height: 44px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: #2563eb;
+  box-shadow: 0 6px 10px rgb(30 64 175 / 24%);
+  pointer-events: none;
+  transition: transform 120ms ease-out, box-shadow 120ms ease-out, background-color 120ms ease-out;
+}
+.animation-03-reference:hover .animation-03-reference-face,
+.animation-03-reference:focus-visible .animation-03-reference-face {
+  background: #1d4ed8;
+}
+.animation-03-reference:active .animation-03-reference-face {
+  transform: translateY(2px) scale(0.96);
+  box-shadow: 0 1px 2px rgb(30 64 175 / 24%);
+  background: #1e40af;
+}
+.animation-03-reference:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animation-03-reference-face { transition: none; }
+  .animation-03-reference:active .animation-03-reference-face { transform: none; }
+}
