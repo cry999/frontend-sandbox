@@ -71,5 +71,5 @@
 ## 進捗
 
 - アニメーション01：レビュー合格（2026-10-27）。[課題と完成条件](../src/exercises/animation-01-color-transition/README.md)。
-- アニメーション02：準備完了・ユーザー実装待ち。[課題と完成条件](../src/exercises/animation-02-floating-button/README.md)。
+- アニメーション02：レビュー合格（2026-10-27）。[課題と完成条件](../src/exercises/animation-02-floating-button/README.md)。
 - アニメーション03〜30：未着手。
