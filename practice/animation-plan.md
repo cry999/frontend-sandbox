@@ -70,5 +70,5 @@
 
 ## 進捗
 
-- アニメーション01：準備完了・実装待ち（2026-10-27）。[課題と完成条件](../src/exercises/animation-01-color-transition/README.md)。
+- アニメーション01：レビュー合格（2026-10-27）。[課題と完成条件](../src/exercises/animation-01-color-transition/README.md)。
 - アニメーション02〜30：未着手。

@@ -1,2 +1,34 @@
 /* アニメーション01専用のクラス（例: animation-01-color-button）で実装します。
    最初に通常時の見た目、次に状態ごとの背景色、最後に変化の時間を考えましょう。 */
+.btn-anim-1 {
+  border: none;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+
+  background-color: #2563eb;
+  padding: 12px 24px;
+
+  transition: background-color 0.3s;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
+  &:hover {
+    background-color: #1e40af;
+  }
+
+  &:focus-visible {
+    background-color: #1e40af;
+    outline: solid 3px #2563eb;
+    outline-offset: 3px;
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+}
