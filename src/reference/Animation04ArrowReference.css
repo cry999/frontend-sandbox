@@ -1,0 +1,39 @@
+.animation-04-reference {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  cursor: pointer;
+  transition: background-color 200ms ease-out;
+}
+.animation-04-reference-arrow {
+  display: inline-flex;
+  flex-shrink: 0;
+  pointer-events: none;
+  transition: transform 200ms ease-out;
+}
+.animation-04-reference:hover,
+.animation-04-reference:focus-visible { background: #1d4ed8; }
+.animation-04-reference:hover .animation-04-reference-arrow,
+.animation-04-reference:focus-visible .animation-04-reference-arrow { transform: translateX(6px); }
+.animation-04-reference:active { background: #1e40af; }
+.animation-04-reference:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animation-04-reference,
+  .animation-04-reference-arrow { transition: none; }
+  .animation-04-reference:hover .animation-04-reference-arrow,
+  .animation-04-reference:focus-visible .animation-04-reference-arrow { transform: none; }
+}

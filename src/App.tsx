@@ -19,6 +19,8 @@ import Animation02FloatingExercise from './exercises/animation-02-floating-butto
 import Animation02FloatingReference from './reference/Animation02FloatingReference'
 import Animation03PressExercise from './exercises/animation-03-press-button/Animation03PressExercise'
 import Animation03PressReference from './reference/Animation03PressReference'
+import Animation04ArrowExercise from './exercises/animation-04-arrow-button/Animation04ArrowExercise'
+import Animation04ArrowReference from './reference/Animation04ArrowReference'
 import './App.css'
 
 const lessons = ['塗りつぶしボタン', '枠線・テキストボタン', '操作への反応', 'アイコンとボタン', '処理中・無効・完了', '用途に応じた組み合わせ']
@@ -59,34 +61,47 @@ export default function App() {
       <section className="lesson" aria-labelledby="lesson-heading">
         <div className="lesson-heading">
           <div>
-            <p className="eyebrow">ANIMATION 03 / 30</p>
-            <h2 id="lesson-heading">押すと沈むボタン</h2>
+            <p className="eyebrow">ANIMATION 04 / 30</p>
+            <h2 id="lesson-heading">矢印が進むボタン</h2>
           </div>
           <span className="duration">目安 30〜60分</span>
         </div>
-        <p className="lesson-description">押している間だけ少し縮む面と、浅くなる影。離した瞬間まで観察して、押した感触を作りましょう。</p>
+        <p className="lesson-description">ボタンと文字はそのままに、矢印だけが少し先へ。動かす部分を選び、進む方向を伝えましょう。</p>
         <div className="comparison">
           <section className="preview-panel" aria-labelledby="reference-heading">
-            <h3 id="reference-heading">見本 · 96% / 120ms</h3>
-            <InteractionPreview><Animation03PressReference /></InteractionPreview>
-            <p className="panel-caption">押し続けると面が96%に縮み、2px沈んで影が浅くなります。離すと戻ります。端で押しても安定するか観察しましょう。</p>
+            <h3 id="reference-heading">見本 · 6px / 200ms</h3>
+            <InteractionPreview><Animation04ArrowReference /></InteractionPreview>
+            <p className="panel-caption">重ねるかTabで選ぶと矢印だけが右へ6px進み、離れると戻ります。ボタンの端と文字の位置も観察しましょう。</p>
           </section>
           <section className="preview-panel" aria-labelledby="exercise-heading">
             <h3 id="exercise-heading">あなたの実装</h3>
-            <InteractionPreview><Animation03PressExercise /></InteractionPreview>
+            <InteractionPreview><Animation04ArrowExercise /></InteractionPreview>
             <p className="panel-caption">保存すると、この欄に反映されます。操作回数の表示は用意済みです。</p>
           </section>
         </div>
         <section className="instructions" aria-labelledby="task-heading">
           <h3 id="task-heading">今回の課題</h3>
           <ol>
-            <li><code>src/exercises/animation-03-press-button/Animation03PressExercise.tsx</code>に「押してみる」ボタンを作ります。</li>
-            <li>同じフォルダの<code>Animation03PressExercise.css</code>で縮小と影を連動させます。押せる範囲を固定し、押す・離すの両方を滑らかにしましょう。</li>
+            <li><code>src/exercises/animation-04-arrow-button/Animation04ArrowExercise.tsx</code>に「次へ進む」と右矢印を持つボタンを作ります。矢印素材はREADMEで案内しています。</li>
+            <li>同じフォルダの<code>Animation04ArrowExercise.css</code>で、内部の矢印だけを動かします。行き帰りを約200ms・ease-outに揃えましょう。</li>
             <li>Tab・Enter・Space、360px・390px幅、動きを減らす設定で確認します。詳しい完成条件はREADMEにあります。</li>
           </ol>
-          <p>まず見本を長押しして、面の大きさと影を観察しましょう。できたら、沈んで見えた理由を一言添えて「レビューして」と伝えてください。</p>
+          <p>まず見本の矢印と文字の間隔を観察しましょう。できたら、矢印だけを動かしたときの印象を一言添えて「レビューして」と伝えてください。</p>
         </section>
       </section>
+      <details className="previous-lesson">
+        <summary>アニメーション03：押すと沈む（レビュー合格済み）</summary>
+        <div className="comparison">
+          <section className="preview-panel" aria-label="アニメーション03の見本">
+            <h3>見本 · 96% / 120ms</h3>
+            <InteractionPreview><Animation03PressReference /></InteractionPreview>
+          </section>
+          <section className="preview-panel" aria-label="アニメーション03の実装">
+            <h3>あなたの実装</h3>
+            <InteractionPreview><Animation03PressExercise /></InteractionPreview>
+          </section>
+        </div>
+      </details>
       <details className="previous-lesson">
         <summary>アニメーション02：ふわっと浮く（レビュー合格済み）</summary>
         <div className="comparison">
