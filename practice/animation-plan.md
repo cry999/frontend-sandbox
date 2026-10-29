@@ -73,5 +73,5 @@
 - アニメーション01：レビュー合格（2026-10-27）。[課題と完成条件](../src/exercises/animation-01-color-transition/README.md)。
 - アニメーション02：レビュー合格（2026-10-27）。[課題と完成条件](../src/exercises/animation-02-floating-button/README.md)。
 - アニメーション03：レビュー合格（2026-10-29）。[課題と完成条件](../src/exercises/animation-03-press-button/README.md)。
-- アニメーション04：準備完了・ユーザー実装待ち（2026-10-29）。[課題と完成条件](../src/exercises/animation-04-arrow-button/README.md)。
+- アニメーション04：レビュー合格（2026-10-29）。[課題と完成条件](../src/exercises/animation-04-arrow-button/README.md)。
 - アニメーション05〜30：未着手。

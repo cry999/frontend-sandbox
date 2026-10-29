@@ -1,1 +1,54 @@
 /* アニメーション04専用のクラスで実装してください。 */
+.btn-anim-4 {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+
+  background-color: #2563eb;
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  @media not (prefers-reduced-motion: reduce) {
+    transition: transform 0.2s ease-out, background-color 0.2s ease-out;
+  }
+
+  &:focus-visible,
+  &:hover {
+    background-color: #1d4ed8;
+
+    .icon-anim-4 {
+      @media not (prefers-reduced-motion: reduce) {
+        transform: translate(6px, 0);
+      }
+    }
+  }
+
+  &:active {
+    background-color: #1e40af;
+  }
+
+  &:focus-visible {
+    outline: solid 3px #2563eb;
+    outline-offset: 3px;
+  }
+}
+
+.txt-anim-4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.icon-anim-4 {
+  display: flex;
+
+  @media not (prefers-reduced-motion: reduce) {
+    transition: transform 0.2s ease-out, background-color 0.2s ease-out;
+  }
+}
