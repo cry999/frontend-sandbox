@@ -74,4 +74,5 @@
 - アニメーション02：レビュー合格（2026-10-27）。[課題と完成条件](../src/exercises/animation-02-floating-button/README.md)。
 - アニメーション03：レビュー合格（2026-10-29）。[課題と完成条件](../src/exercises/animation-03-press-button/README.md)。
 - アニメーション04：レビュー合格（2026-10-29）。[課題と完成条件](../src/exercises/animation-04-arrow-button/README.md)。
-- アニメーション05〜30：未着手。
+- アニメーション05：準備完了・実装待ち。[課題と完成条件](../src/exercises/animation-05-underline-button/README.md)。
+- アニメーション06〜30：未着手。

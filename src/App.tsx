@@ -21,6 +21,8 @@ import Animation03PressExercise from './exercises/animation-03-press-button/Anim
 import Animation03PressReference from './reference/Animation03PressReference'
 import Animation04ArrowExercise from './exercises/animation-04-arrow-button/Animation04ArrowExercise'
 import Animation04ArrowReference from './reference/Animation04ArrowReference'
+import Animation05UnderlineExercise from './exercises/animation-05-underline-button/Animation05UnderlineExercise'
+import Animation05UnderlineReference from './reference/Animation05UnderlineReference'
 import './App.css'
 
 const lessons = ['塗りつぶしボタン', '枠線・テキストボタン', '操作への反応', 'アイコンとボタン', '処理中・無効・完了', '用途に応じた組み合わせ']
@@ -61,34 +63,47 @@ export default function App() {
       <section className="lesson" aria-labelledby="lesson-heading">
         <div className="lesson-heading">
           <div>
-            <p className="eyebrow">ANIMATION 04 / 30</p>
-            <h2 id="lesson-heading">矢印が進むボタン</h2>
+            <p className="eyebrow">ANIMATION 05 / 30</p>
+            <h2 id="lesson-heading">下線が伸びるボタン</h2>
           </div>
           <span className="duration">目安 30〜60分</span>
         </div>
-        <p className="lesson-description">ボタンと文字はそのままに、矢印だけが少し先へ。動かす部分を選び、進む方向を伝えましょう。</p>
+        <p className="lesson-description">文字の下に、左からすっと伸びる一本の線。疑似要素と変形の起点を使って、控えめな反応を作りましょう。</p>
         <div className="comparison">
           <section className="preview-panel" aria-labelledby="reference-heading">
-            <h3 id="reference-heading">見本 · 6px / 200ms</h3>
-            <InteractionPreview><Animation04ArrowReference /></InteractionPreview>
-            <p className="panel-caption">重ねるかTabで選ぶと矢印だけが右へ6px進み、離れると戻ります。ボタンの端と文字の位置も観察しましょう。</p>
+            <h3 id="reference-heading">見本 · 左から / 220ms</h3>
+            <InteractionPreview><Animation05UnderlineReference /></InteractionPreview>
+            <p className="panel-caption">重ねるかTabで選ぶと下線が左から伸び、離れると左へ縮みます。文字と押せる範囲は動きません。</p>
           </section>
           <section className="preview-panel" aria-labelledby="exercise-heading">
             <h3 id="exercise-heading">あなたの実装</h3>
-            <InteractionPreview><Animation04ArrowExercise /></InteractionPreview>
+            <InteractionPreview><Animation05UnderlineExercise /></InteractionPreview>
             <p className="panel-caption">保存すると、この欄に反映されます。操作回数の表示は用意済みです。</p>
           </section>
         </div>
         <section className="instructions" aria-labelledby="task-heading">
           <h3 id="task-heading">今回の課題</h3>
           <ol>
-            <li><code>src/exercises/animation-04-arrow-button/Animation04ArrowExercise.tsx</code>に「次へ進む」と右矢印を持つボタンを作ります。矢印素材はREADMEで案内しています。</li>
-            <li>同じフォルダの<code>Animation04ArrowExercise.css</code>で、内部の矢印だけを動かします。行き帰りを約200ms・ease-outに揃えましょう。</li>
+            <li><code>src/exercises/animation-05-underline-button/Animation05UnderlineExercise.tsx</code>に「詳しく見る」のボタンを作ります。下線は疑似要素で用意しましょう。</li>
+            <li>同じフォルダの<code>Animation05UnderlineExercise.css</code>で、下線の伸縮を作ります。行き帰りを約220ms・ease-outに揃えましょう。</li>
             <li>Tab・Enter・Space、360px・390px幅、動きを減らす設定で確認します。詳しい完成条件はREADMEにあります。</li>
           </ol>
-          <p>まず見本の矢印と文字の間隔を観察しましょう。できたら、矢印だけを動かしたときの印象を一言添えて「レビューして」と伝えてください。</p>
+          <p>まず下線がどこから伸び、どちらへ戻るかを観察しましょう。できたら、左を起点にした動きの印象を一言添えて「レビューして」と伝えてください。</p>
         </section>
       </section>
+      <details className="previous-lesson">
+        <summary>アニメーション04：矢印が進む（レビュー合格済み）</summary>
+        <div className="comparison">
+          <section className="preview-panel" aria-label="アニメーション04の見本">
+            <h3>見本 · 6px / 200ms</h3>
+            <InteractionPreview><Animation04ArrowReference /></InteractionPreview>
+          </section>
+          <section className="preview-panel" aria-label="アニメーション04の実装">
+            <h3>あなたの実装</h3>
+            <InteractionPreview><Animation04ArrowExercise /></InteractionPreview>
+          </section>
+        </div>
+      </details>
       <details className="previous-lesson">
         <summary>アニメーション03：押すと沈む（レビュー合格済み）</summary>
         <div className="comparison">
